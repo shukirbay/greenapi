@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green API Test</title>
+    <style>
+        /* Основные стили для страницы */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        /* Контейнер для всей страницы */
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        /* Левый столбец для ввода данных */
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            max-width: 300px; /* Ограничиваем ширину левой колонки */
+            margin-right: 20px; /* Добавляем отступ справа */
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        /* Объединенный блок для ввода номера телефона, сообщения и кнопки отправки */
+        .message-container {
+            margin-bottom: 5px; /* Меньший отступ для группировки полей и кнопки */
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Правый столбец для вывода данных */
+        .right-column {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .output-container {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            height: 100%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="input-container">
+                <input type="text" id="idInstance" placeholder="Введите idInstance" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="ApiTokenInstance" placeholder="Введите ApiTokenInstance" required>
+            </div>
+            <button onclick="getSettings()">getSettings</button>
+            <button onclick="getStateInstance()">getStateInstance</button>
+
+            <!-- Группировка полей для ввода номера телефона и сообщения вместе с кнопкой отправки -->
+            <div class="message-container">
+                <input type="text" id="phoneNumber" placeholder="Введите номер телефона" required>
+            </div>
+            <div class="message-container">
+                <input type="text" id="message" placeholder="Введите сообщение" required>
+            </div>
+            <div class="message-container">
+                <button onclick="sendMessage()">sendMessage</button>
+            </div>
+
+            <div class="message-container">
+                <input type="text" id="phoneNumber" placeholder="Введите номер телефона" required>
+            </div>
+            <div class="input-container">
+                <input type="text" id="fileUrl" placeholder="Введите URL файла" required>
+            </div>
+            <button onclick="sendFileByUrl()">sendFileByUrl</button>
+        </div>
+
+        <div class="right-column">
+            <div class="output-container" id="output">
+                Ответ методов будет отображаться здесь...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getSettings() {
+            // Ваш JavaScript-код для вызова метода getSettings
+        }
+
+        function getStateInstance() {
+            // Ваш JavaScript-код для вызова метода getStateInstance
+        }
+
+        function sendMessage() {
+            // Ваш JavaScript-код для вызова метода sendMessage
+        }
+
+        function sendFileByUrl() {
+            // Ваш JavaScript-код для вызова метода sendFileByUrl
+        }
+    </script>
+</body>
+</html>
